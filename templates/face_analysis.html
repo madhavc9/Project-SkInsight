@@ -1,0 +1,122 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+<style>
+    .predictions-container, .recommendations-container {
+        background: #fff;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        margin-top: 20px;
+        width: 80%;
+        max-width: 600px;
+        display:active;
+    }
+
+    .condition-title {
+        color: #333;
+        font-weight: bold;
+        margin-top: 10px;
+    }
+
+    .product-list {
+        list-style: none;
+        padding: 0;
+    }
+
+    .product-list li {
+        padding: 8px;
+        border-bottom: 1px solid #eee;
+        margin-bottom: 5px;
+    }
+
+    .product-list li:last-child {
+        border-bottom: none;
+    }
+    .span{
+        font-size:20px;
+        font-weight: bold;
+        font-family:serif;
+    }
+</style>
+<div class="min-h-[90vh] w-screen flex items-center relative justify-center">
+    <!-- Background Image -->
+    <!-- <img src="../static/assets/bg5.webp" alt="" class="absolute top-0 left-0 w-full h-full object-cover brightness-[90%] z-0"> -->
+
+    <div class="my-12 w-[50vw] bg-white bg-opacity-80 rounded-xl p-8 backdrop-blur-md z-10">
+        <h1 class="text-[40px] leading-[45px] fon-bold">Upload Your Image</h1>
+        <p class="text-zinc-500 mt-1">Get Expert AI evaluations of your skin.</p>
+        <form class="" action="/predict" method="post" enctype="multipart/form-data">
+            <div class="my-6 w-full p-12 rounded-2xl border-pink-500 border-2 border-dashed flex flex-col gap-4 justify-center items-center">
+                <input id="file" class="hidden" type="file" name="image" accept="image/*" required>
+                <p class="text-center text-lg"><span onclick="handleFileClick()" class="text-blue-500 font-semibold underline text-xl">Click Here</span> To Select File</p>
+                <p class="mt-4 text-sm hidden" id="file-selected"> File Selected!</p>
+            </div>
+            <button class="px-6 py-2 text-white text-lg font-semibold bg-pink-500 hover:bg-pink-600 rounded-xl" type="submit">Predict</button>
+        </form>
+        <div class="predictions-container">
+            <h2 class="condition-title">Predictions:</h2>
+            <ul id="prediction" class="product-list"></ul>
+        </div>
+        <div class="recommendations-container">
+            <h2 class="condition-title">Recommendations:</h2>
+            <ul id="recommendations" class="product-list"></ul>
+        </div>
+        <img src="" id="image" alt="" class="hidden mt-4 h-[400px] w-full object-fit">
+    </div>
+</div>
+<script>
+    var data = '{{ data | tojson | safe }}';
+    const jsonData = JSON.parse(data);
+    console.log(jsonData);
+
+    const fileInput = document.getElementById('file');
+    function handleFileClick() {
+        fileInput.click();
+    }
+    fileInput.addEventListener('change', () => {
+        document.getElementById('file-selected').classList.toggle('hidden');
+    })
+
+    document.addEventListener("DOMContentLoaded", () => {
+        const predictionContainer = document.getElementById('prediction');
+        jsonData.classes.forEach(condition => {
+            const conditionItem = document.createElement('li');
+            conditionItem.textContent = condition;
+            predictionContainer.appendChild(conditionItem);
+        });
+
+        const recommendationContainer = document.getElementById('recommendations');
+        jsonData.recommendations.forEach(item => {
+            const condition = item[0];
+            const products = item[1];
+            console.log(item)
+            const conditionItem = document.createElement('li');
+        
+            conditionItem.innerHTML = `<strong>${condition} :</strong> `;
+            products.forEach(product => {
+                const productItem = document.createElement('li');
+                conditionItem.classList.add('condition');
+                const Ingredients = product.Ingredients.replace(/[^a-zA-Z0-9\s]/g, "");
+                productItem.innerHTML = `
+                <span>Brand :</span> ${product.Brand} <br>
+                <span>Name :</span>  ${product.Name} <br>
+                <span>Price :</span> $ ${product.Price} <br>
+                <span>Ingredients :</span> ${Ingredients}
+            `;
+                conditionItem.appendChild(productItem);
+            });
+            recommendationContainer.appendChild(conditionItem);
+        });
+        // Check if there are any classes and the image element is present
+        if (jsonData.classes && jsonData.classes.length > 0) {
+            const img = document.getElementById('image');
+            if (img) {
+                img.src = "/static/annotations_0.jpg"; // Adjusted to a more reliable path
+                img.classList.remove('hidden');
+            }
+        }
+    });
+</script>
+
+{% endblock %}

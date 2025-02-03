@@ -1,0 +1,220 @@
+@import url('https://fonts.googleapis.com/css2?family=Cabin+Sketch:wght@400;700&family=Inter:wght@200;300;400;500;600;700&family=Montserrat:wght@300;400;500;600;700&family=Onest:wght@400;500;600;700;800&family=Poppins:wght@200;300;400;500;600;700&display=swap');
+
+*{
+    margin: 0;
+    padding:0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* login pages */
+.register-page{
+    height: 100vh;
+    width: 100%;
+
+    background: linear-gradient(rgba(251,113,133,0.4), rgba(193, 124, 135, 0.4)), url('../assets/login-img.jpg');
+
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.register-container{
+    width: 30%;
+    position: absolute;
+    left: 10%;
+    top: 50%;
+    transform: translateY(-50%);
+
+    background-color: white;
+    border-radius: 24px;
+    padding: 2.5rem 4rem;
+}
+.register-container h2{
+    text-align: center;
+    font-weight: 500;
+}
+.register-container p{
+    text-align: center;
+    margin-bottom: 2rem;
+    margin-top: 0.5rem;
+    font-size: small;
+}
+
+.saperator-box{
+   display: flex;
+   justify-content: space-around;
+   align-items: center;
+   gap: 0.75rem;
+   margin: 1rem 0;
+}
+.saperator-box div{
+    width: 100%;
+    height: 2px; 
+    background: rgba(102, 102, 102, 0.25)
+}
+.saperator-box span{
+    color: #666666; 
+    font-size: 24px; 
+    font-family: 'Montserrat', sans-serif; 
+    font-weight: 400; 
+    word-wrap: break-word
+}
+
+.form-component{
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    margin-top: 1rem;
+}
+.form-component label{
+    color: grey;
+}
+.form-component input{
+    padding: 0.75rem 1.5rem;
+    border: 1px solid grey;
+    border-radius: 12px;
+    outline: none;
+}
+
+.register-container button{
+    width: 100%;
+    background-color: #055113;
+    color: white;
+    border-radius: 12px;
+    padding: 0.75rem 0;
+
+    border: none;
+    outline: none;
+    margin-top: 2rem;
+    cursor: pointer;
+}
+
+
+
+.right-content{
+    color: white;
+    width: 50%;
+    position: absolute;
+    right: 0%;
+    top: 50%;
+    transform: translateY(-50%);
+    animation: fadeInUp 1s ease-in-out forwards;
+}
+.right-content h1{
+    font-size: 100px;
+}
+.right-content h3{
+    font-size: 40px;
+}
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(0);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(-50%);
+    }
+}
+
+/* upload pages */
+.upload-container{
+    border-radius: 40px;
+}
+
+.upload-heading{
+    
+    text-align: center;
+}
+
+.upload-mid-section{
+
+    padding: 1.5rem;
+
+}
+
+.file-upload{
+    padding: 4rem;
+    border: 2px dashed rgb(189, 189, 189);
+    border-radius: 8px;
+    text-align: center;
+    cursor: pointer;
+    width: 100%;
+}
+
+
+.upload-btn{
+
+    background-color: transparent;
+    border: 1px solid white;
+    color: white;
+    background-color: #6587b4;
+    padding: 0.75rem 1.25rem;
+    border-radius: 8px;
+    margin-top: 0.5rem;
+    width: 100%;
+    
+    font-size: large;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.1s ease-in-out;
+}
+.upload-btn:hover{
+    
+    background-color: #4a6589;
+}
+
+.uploading-file,.uploaded-file{
+    background-color: #b1cef3;
+    border-radius: 8px;
+    padding: 0.5rem 1.25rem;
+
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-top: 1rem;
+    position: relative;
+}
+.uploaded-file{
+    background-color: #5f7797;
+    color: white;
+}
+#progress-bar{
+    height: 3px;
+    width: 0%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background-color: #2d3e54;
+    border-radius: 40px;
+}
+
+.upload-container-outer h3{
+    margin-top: 2rem;
+    text-align: center;
+}
+
+.uploading-area{
+    height: 3rem;
+}
+
+
+
+.submit-btn{
+    border: none;
+    color: white;
+    background-color: #6587b4;
+    padding: 0.75rem 2rem;
+    border-radius: 30px;
+    margin-top: 0.5rem;
+    width: fit-content;
+    font-size: large;
+    font-weight: 600;
+    cursor: pointer;
+    outline: none!important;
+}
+.submit-btn:hover{
+    
+    background-color: #4a6589;
+}

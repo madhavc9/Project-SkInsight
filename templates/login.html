@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <style>
+        body {
+            background-image: url('../static/assets/bg5.webp');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+    </style>
+</head>
+<body class="bg-gray-100 flex items-center justify-center min-h-screen px-4">
+    
+    <div class="flex flex-col md:flex-row bg-white shadow-lg rounded-2xl p-8 w-full max-w-3xl">
+        
+        <!-- Welcome Section -->
+        <div class="md:w-1/2 flex flex-col items-center justify-center p-6 bg-gradient-to-r from-blue-500 to-purple-600 text-white rounded-t-2xl md:rounded-l-2xl md:rounded-tr-none text-center">
+            <h1 class="text-3xl md:text-4xl font-bold">Welcome To<br>SkInsight!</h1>
+        </div>
+       
+
+        <!-- Form Section -->
+        <div class="md:w-1/2 p-8 w-full flex flex-col">
+            <h2 class="text-2xl font-semibold text-center text-gray-900">Log In</h2>
+            <p class="text-center mt-2 text-gray-600">
+                Don't have an account? 
+                <a href="/register" class="text-purple-600 font-semibold hover:underline">Register Here.</a>
+            </p>
+
+            <!-- OR Separator -->
+            <div class="flex items-center gap-4 my-6">
+                <div class="flex-1 h-px bg-gray-300"></div>
+                <span class="text-gray-500 text-sm font-semibold">OR</span>
+                <div class="flex-1 h-px bg-gray-300"></div>
+            </div>
+
+            <!-- Form -->
+            <form action="/" method="post" class="flex flex-col gap-4">
+                <input type="text" name="username" placeholder="Enter Your Username" class="border rounded-lg px-4 py-3 w-full text-gray-700 focus:outline-none focus:ring-2 focus:ring-green-500">
+                <input type="password" name="password" placeholder="Enter Your Password" class="border rounded-lg px-4 py-3 w-full text-gray-700 focus:outline-none focus:ring-2 focus:ring-green-500">
+                <button type="submit" class="bg-green-700 text-white font-semibold py-3 rounded-lg hover:bg-green-800 transition">Log In</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Skin Health Survey</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+            margin: 0;
+            padding:0;
+        }
+
+        .container {
+            text-align: center;
+            padding: 20px;
+            border-radius: 10px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 90%; /* Adjust width */
+            max-width: 600px; /* Set maximum width */
+            margin: 0 auto; /* Center the container */
+        }
+
+        h2 {
+            color: #333;
+        }
+
+        form {
+            text-align: left;
+            max-width: 400px;
+            margin: 0 auto;
+        }
+
+        label {
+            display: block;
+            color: #333;
+        }
+
+        input[type="text"],
+        textarea,
+        select {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+
+        button {
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+
+        ::-webkit-scrollbar {
+            width: 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="h-[100vh] w-[100vw] relative flex items-center justify-center">
+        <img src="../static/assets/bg5.webp" alt="" class="fixed top-0 left-0 absolute h-[100vh] w-[100vw] brightness-[90%] z-1">
+        <div class="z-50 relative bg-[rgba(255,255,255,0.28)] rounded-xl p-7 backdrop-blur-md w-fit h-[90vh] overflow-y-scroll ">
+            <h2 class="font-bold text-3xl mb-2">Skin Health Survey</h2>
+            <form action="/survey" method="POST" class="flex flex-col gap-1">
+                <!-- Hidden input fields for name and age -->
+                <input type="hidden" id="name" name="name" value="{{ name }}">
+                <input type="hidden" id="age" name="age" value="{{ age }}">
+                
+                <label for="age" class="text-lg font-semibold">1. What Is Your Age?</label>
+                <select id="age" name="age" required>
+                    <option value="<12">&lt;12</option>
+                    <option value="12-18">12-18</option>
+                    <option value="18-25">18-25</option>
+                    <option value="26-45">26-45</option>
+                    <option value="46-55">46-55</option>
+                    <option value="55+">55+</option>
+                </select><br>
+                
+                <label for="gender" class="text-lg font-semibold">2. What is your Gender?</label>
+                <select id="gender" name="gender" required>
+                    <option value="Male">Male</option>
+                    <option value="Female">Female</option>
+                </select><br>
+                
+                <label for="concerns" class="text-lg font-semibold">3. Please Select Your Concerns:</label><br>
+                <select id="concerns" name="concerns" multiple required>
+                    <option value="Acne">Acne</option>
+                    <option value="Dry skin">Dry skin</option>
+                    <option value="Oily skin">Oily skin</option>
+                    <option value="Blackheads or whiteheads">Blackheads or whiteheads</option>
+                    <option value="Papules">Papules</option>
+                    <option value="Skin allergies or irritations">Skin allergies or irritations</option>
+                </select><br>
+                
+                <label for="acne_frequency" class="text-lg font-semibold">4. How Often Does Your Acne Appear?</label>
+                <select id="acne_frequency" name="acne_frequency" required>
+                    <option value="Never">Never</option>
+                    <option value="Once in a month">Once in a month</option>
+                    <option value="Once in 3 months">Once in 3 months</option>
+                    <option value="Always Present">Always Present</option>
+                </select><br>
+                
+                <label for="comedones_count" class="text-lg font-semibold">5. How Many Comedones (Whiteheads, Blackheads, Tiny Pimples) Do You Have On Your Face?</label>
+                <select id="comedones_count" name="comedones_count" required>
+                    <option value="None">None</option>
+                    <option value="Less than 5">Less than 5</option>
+                    <option value="About 5-10">About 5-10</option>
+                    <option value="More than 10">More than 10</option>
+                </select><br>
+                
+                <label for="first_concern" class="text-lg font-semibold">6. Please Select The Concern You'd Like To Address First:</label>
+                <select id="first_concern" name="first_concern" required>
+                    <option value="Acne">Acne</option>
+                    <option value="Dry skin">Dry skin</option>
+                    <option value="Oily skin">Oily skin</option>
+                    <option value="Blackheads or whiteheads">Blackheads or whiteheads</option>
+                    <option value="Papules">Papules</option>
+                </select><br>
+                
+                <label for="cosmetics_usage" class="text-lg font-semibold">7. How Often do you use Cosmetics?</label>
+                <select id="cosmetics_usage" name="cosmetics_usage" required>
+                    <option value="Everyday">Everyday</option>
+                    <option value="Occasionally">Occasionally</option>
+                    <option value="Rarely Or Never">Rarely Or Never</option>
+                </select><br>
+                
+                <label for="skin_reaction" class="text-lg font-semibold">8. Does Your Skin React On Application Of Skin Care Products?</label>
+                <select id="skin_reaction" name="skin_reaction" required>
+                    <option value="Rarely/Never">Rarely/Never</option>
+                    <option value="Often">Often</option>
+                </select><br>
+                
+                <label for="skin_type" class="text-lg font-semibold">9. Which Of The Following Is True For Your Skin?</label>
+                <select id="skin_type" name="skin_type_details" required>
+                    <option value="Part Oily And Part Normal (Combination Skin)">Part Oily And Part Normal (Combination Skin)</option>
+                    <option value="Neither Very Oily Nor Very Dry">Neither Very Oily Nor Very Dry</option>
+                    <option value="Oily Forehead And Nose Bridge (T Zone)">Oily Forehead And Nose Bridge (T Zone)</option>
+                    <option value="None Of The Above">None Of The Above</option>
+                </select><br>
+                
+                <label for="medications" class="text-lg font-semibold">10. Are you taking any medications that could interact with skincare products?</label>
+                <select id="medications" name="medications" required>
+                    <option value="Yes">Yes</option>
+                    <option value="No">No</option>
+                </select><br>
+                
+                <label for="skincare_routine" class="text-lg font-semibold">11. Describe your current skincare routine:</label><br>
+                <textarea id="skincare_routine" name="skincare_routine" rows="4" required></textarea><br>
+                
+                <label for="stress_level" class="text-lg font-semibold">12. How would you describe your overall stress level? (0-5)</label>
+                <input type="number" id="stress_level" name="stress_level" min="0" max="5" required><br><br>
+                
+                <button type="submit" class="text-white font-semibold text-lg bg-[#4895ef] w-full p-2">Submit</button>
+            </form>
+        </div>
+    </div>
+    <script src="https://cdn.tailwindcss.com"></script>
+</body>
+</html>

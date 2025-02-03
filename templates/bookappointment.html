@@ -1,0 +1,36 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+
+ <div class="min-h-screen w-full relative flex flex-col items-center justify-center px-4 py-8">
+    <!-- <img src="../static/assets/bg5.webp" alt="" class="absolute top-0 left-0 w-full h-full object-cover brightness-[90%] z-0"> -->
+    
+    <div class="max-w-screen-lg w-full bg-white bg-opacity-80 rounded-xl p-8 backdrop-blur-md flex flex-col z-20">
+        <div class="h-[10vh] w-full flex justify-center items-center">
+            <h1 class="text-4xl md:text-6xl font-serif text-center">Make an Appointment</h1>
+        </div>
+        <div class="w-full flex justify-center">
+            <form action="/appointment" method="POST" class="w-full flex flex-col gap-6">
+                <div class="flex flex-wrap justify-center items-center gap-4 md:gap-10 mt-6">
+                    <input type="text" name="name" placeholder="Enter Your Full Name" class="h-12 w-full md:w-96 p-4 outline-none border-2 border-gray-600" required>
+                    <input type="text" name="email" placeholder="Enter your Email address" class="h-12 w-full md:w-96 p-4 outline-none border-2 border-gray-600" required>
+                </div>
+                <div class="flex flex-wrap justify-center items-center gap-4 md:gap-10">
+                    <input type="date" name="date" placeholder="mm/dd/yy" class="h-12 w-full md:w-96 p-4 outline-none border-2 border-gray-600" required>
+                    <input type="text" name="skin" placeholder="Skin Type" class="h-12 w-full md:w-96 p-4 outline-none border-2 border-gray-600" required>
+                </div>
+                <div class="flex flex-wrap justify-center items-center gap-4 md:gap-10">
+                    <input type="text" name="phone" placeholder="Phone No." class="h-12 w-full md:w-96 p-4 outline-none border-2 border-gray-600" required>
+                    <input type="text" name="age" placeholder="Enter your Age" class="h-12 w-full md:w-96 p-4 outline-none border-2 border-gray-600" required>
+                </div>
+                <div class="w-full">
+                    <input type="text" name="address" placeholder="Enter Reason" class="h-12 w-full p-4 outline-none border-2 border-gray-600" required>
+                </div>
+                <div class="flex justify-center">
+                    <button class="h-12 w-40 text-lg rounded-md bg-green-400 hover:bg-green-600 text-white font-serif p-4">Submit</button>
+                </div>
+            </form>
+        </div>
+    </div>    
+</div>  
+{% endblock %}

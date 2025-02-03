@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+    <div class="h-[100vh] w-full">
+            <div class="flex items-center justify-between h-[10vh] bg-white px-12 font-serif">
+                <h1 class="text-xl font-bold text-black">
+                    <i class="fa-solid fa-user-tie text-3xl text-black "></i> SkInsight 
+                </h1>
+                <div class="flex items-center gap-8 font-bold ">
+                    <!-- <a href="/doctor" ><i class="fa-solid fa-house text-xl "></i>  Home</a> -->
+                    <a href="/"><i class="fa-solid fa-right-from-bracket text-xl  "></i> Logout</a>
+                </div>
+            </div>
+            <div class="h-[100vh] w-full flex flex-col justify-center items-center gap-9 relative ">
+                <img src="../static/assets/bg5.webp" alt="" class="absolute top-0 left-0 w-full h-full object-cover brightness-[90%] z-0">
+                <div class="h-[20vh] w-full flex items-center justify-center z-20">
+                    <h1 class="text-black text-5xl font-bold font-serif "><i class="fa-solid fa-stethoscope text-6xl font-bold text-black "></i> Patient's Appointment Requests</h1>
+                </div>
+                <div id="appointmentsContainer" class="h-[60vh] z-20 w-4/5 bg-white bg-opacity-80  p-8 backdrop-blur-md rounded-xl overflow-y-scroll shadow-2xl shadow-black flex flex-col">
+                  
+                </div>
+
+              
+    
+    
+            </div>
+
+       
+         
+         
+
+         
+            
+            
+            
+       
+        
+
+      
+
+    </div>
+
+    <script>
+        var Alluser = {{ appointments  | safe }};
+
+      
+        var container = document.getElementById("appointmentsContainer");
+
+        // Iterate over the appointments array
+
+       
+
+        // Iterate over the appointments array
+        Alluser.forEach(function(appointment) {
+            // Create a new appointment div element
+            var appointmentDiv = document.createElement("div");
+            appointmentDiv.classList.add("h-auto", "w-full", "bg-slate-300", "mt-3", "rounded-xl", "border-black", "border-2", "p-3", "text-xl", "font-serif", "mb-3", "relative");
+         
+            // Construct the content of the appointment div
+            var content = "<strong>Name:</strong> " + appointment[1] + "<br>" +
+                          "<strong>Email:</strong> " + appointment[2] + "<br>" +
+                          "<strong>Date:</strong> " + appointment[3] + "<br>" +
+                          "<strong>Skin Type:</strong> " + appointment[4] + "<br>"+
+                          "<strong>Phone No.:</strong> " + appointment[5] + "<br>"+
+                          "<strong>Reason :</strong> " + appointment[7] + "<br>"
+                          ;
+        
+            // Set the content of the appointment div
+            appointmentDiv.innerHTML = content;
+        
+            // Create icon for check (assuming it's a check mark)
+            var checkIcon = document.createElement("i");
+            if (appointment[8]==0){
+            checkIcon.classList.add("fas", "fa-check", "text-xl","text-green-500", "mr-2", "cursor-pointer","ml-2","absolute" ,"top-10","right-12");
+            }
+            checkIcon.onclick = function() {
+                // Call a function to handle check operation
+                handleCheck(appointment); // Pass appointment details to the function
+            };
+        
+            // Create icon for trash (assuming it's a trash can)
+            var trashIcon = document.createElement("i");
+            trashIcon.classList.add("fas", "fa-trash-alt", "text-xl","text-red-500", "cursor-pointer","ml-2","absolute" ,"top-10","right-4");
+            trashIcon.onclick = function() {
+                // Call a function to handle delete operation
+                handleDelete(appointment); // Pass appointment details to the function
+            };
+        
+            // Append icons to the appointment div
+            appointmentDiv.appendChild(checkIcon);
+            appointmentDiv.appendChild(trashIcon);
+        
+            // Append the appointment div to the container
+            container.appendChild(appointmentDiv);
+        });
+        
+        // Function to handle check operation
+        function handleCheck(appointment) {
+         
+            var xhr = new XMLHttpRequest();
+            xhr.open("POST", "/update_status", true);
+            xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+            xhr.onreadystatechange = function () {
+                if (xhr.readyState === 4 && xhr.status === 200) {
+                    console.log("Appointment status updated successfully");
+                    window.location.reload();
+                    // You can perform additional actions if needed
+                }
+            };
+            xhr.send("appointment_id=" + appointment[0]+"&type="+ appointment[5]);
+
+        }
+        
+        // Function to handle delete operation
+        function handleDelete(appointment) {
+            // You can perform delete operation here
+            var xhr = new XMLHttpRequest();
+            xhr.open("POST", "/delete_user_request", true);
+            xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+            xhr.onreadystatechange = function () {
+                if (xhr.readyState === 4 && xhr.status === 200) {
+                    console.log("deleted successfully");
+                    window.location.reload();
+                    // You can perform additional actions if needed
+                }
+            };
+            xhr.send("id=" + appointment[0]);
+          
+        }
+
+    
+    </script>
+</body>
+</html>

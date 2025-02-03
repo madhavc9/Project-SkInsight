@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>{% block title %}My Flask App{% endblock %}</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      overflow-x: hidden;
+      background-image: url("../static/assets/bg5.webp");
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      padding-top: 80px;
+    }
+  </style>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
+</head>
+<body>
+
+  <!-- Navbar with consistent background -->
+  <nav class="fixed top-0 left-0 shadow-md p-4 flex justify-between items-center w-full z-50 bg-gray-900 text-white">
+    <div class="text-xl font-semibold">
+      <i class="fa-solid fa-user-tie text-3xl"></i> SkInsight
+    </div>
+
+    <!-- Dropdown Menu for Mobile -->
+    <div class="relative md:hidden">
+      <button id="dropdown-btn" class="text-2xl">
+        <i class="bi bi-list"></i>
+      </button>
+      <div id="dropdown-menu" class="hidden absolute right-0 mt-2 w-48 bg-gray-800 shadow-lg rounded-lg border border-gray-700 text-white">
+        <a href="{{ url_for('bookappointment') }}" class="block px-4 py-2 hover:bg-gray-700">New Appointment</a>
+        <a href="{{ url_for('predict') }}" class="block px-4 py-2 hover:bg-gray-700">Face Analysis</a>
+        <a href="{{ url_for('userappoint') }}" class="block px-4 py-2 hover:bg-gray-700">My Appointments</a>
+        <a href="{{ url_for('profile') }}" class="block px-4 py-2 hover:bg-gray-700">Profile</a>
+        <a href="{{ url_for('logout') }}" class="block px-4 py-2 hover:bg-gray-700">Logout</a>
+      </div>
+    </div>
+
+    <!-- Menu for Larger Screens -->
+    <ul class="hidden md:flex flex-wrap justify-end gap-4 md:gap-8 text-center md:flex-nowrap w-full md:w-auto">
+      <li><a href="{{ url_for('bookappointment') }}" class="block md:inline-block hover:text-gray-400">New Appointment</a></li>
+      <li><a href="{{ url_for('predict') }}" class="block md:inline-block hover:text-gray-400">Face Analysis</a></li>
+      <li><a href="{{ url_for('userappoint') }}" class="block md:inline-block hover:text-gray-400">My Appointments</a></li>
+      <li><a href="{{ url_for('profile') }}" class="block md:inline-block hover:text-gray-400">Profile</a></li>
+      <li><a href="{{ url_for('logout') }}" class="block md:inline-block hover:text-gray-400">Logout</a></li>
+    </ul>
+  </nav>
+
+  <div class="content p-4 flex-grow w-full">
+    {% block content %}{% endblock %}
+  </div>
+
+  <!-- Footer with same background as header -->
+  <footer class="bg-gray-900 text-white py-6 mt-8">
+    <div class="container mx-auto px-6 md:px-12 flex flex-col md:flex-row justify-between items-center">
+      <div class="text-center md:text-left mb-4 md:mb-0">
+        <h2 class="text-xl font-semibold">SkInsight</h2>
+        <p class="text-gray-400 text-sm mt-1">Your AI-powered skincare expert.</p>
+      </div>
+
+      <!-- Footer Links -->
+      <div class="flex gap-6 text-sm">
+        <a href="{{ url_for('predict') }}" class="hover:text-gray-400">Face Analysis</a>
+        <a href="{{ url_for('bookappointment') }}" class="hover:text-gray-400">New Appointment</a>
+        <a href="{{ url_for('profile') }}" class="hover:text-gray-400">Profile</a>
+        <!-- <a href="{{ url_for('logout') }}" class="hover:text-gray-400">Logout</a> -->
+      </div>
+
+      <!-- Social Icons -->
+      <div class="flex gap-4 text-lg">
+        <a href="#" class="hover:text-gray-400"><i class="fab fa-facebook"></i></a>
+        <a href="#" class="hover:text-gray-400"><i class="fab fa-twitter"></i></a>
+        <a href="#" class="hover:text-gray-400"><i class="fab fa-instagram"></i></a>
+        <a href="#" class="hover:text-gray-400"><i class="fab fa-linkedin"></i></a>
+      </div>
+    </div>
+
+    <div class="text-center text-gray-500 text-sm mt-4">
+      &copy; 2025 SkInsight. All rights reserved.
+    </div>
+  </footer>
+
+  <script>
+    // Toggle dropdown menu on mobile
+    document.getElementById("dropdown-btn").addEventListener("click", function() {
+      let menu = document.getElementById("dropdown-menu");
+      menu.classList.toggle("hidden");
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,60 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+<div class="h-[100vh] w-full relative flex flex-col items-center justify-center">
+    <!-- <img src="../static/assets/bg5.webp" alt="" class="absolute top-0 left-0 w-full h-full object-cover brightness-[90%] z-0"> -->
+    
+    <div class="h-[70vh] w-full flex flex-col justify-center items-center gap-9 z-20">
+        <div class="h-[10vh] w-full flex items-center justify-center">
+            <h1 class="text-black text-6xl font-serif "><i class="fa-solid fa-calendar-check text-7xl text-black "></i> Doctor's Appointments</h1>
+        </div>
+        <div id="appointmentsContainer" class="h-[80vh] w-4/5 bg-white bg-opacity-80 p-8 backdrop-blur-md rounded-xl overflow-y-scroll shadow-2xl shadow-black flex flex-col">
+        </div>
+    </div>
+</div>
+
+<script>
+    var appointments = {{ all_appointments | safe }};
+    console.log(appointments);
+    
+    var container = document.getElementById("appointmentsContainer");
+    
+    appointments.forEach(function(appointment) {
+        var appointmentDiv = document.createElement("div");
+        appointmentDiv.classList.add("h-auto", "w-full", "bg-slate-300", "mt-3", "rounded-xl", "border-black", "border-2", "p-3", "text-2xl", "font-serif", "relative");
+        
+        var status = appointment[8] == 0 ? "Pending" : "Accepted";
+        
+        var content = "<strong>Name:</strong> " + appointment[1] + "<br>" +
+                      "<strong>Email:</strong> " + appointment[2] + "<br>" +
+                      "<strong>Date:</strong> " + appointment[3] + "<br>" +
+                      "<strong>Skin type:</strong> " + appointment[4] + "<br>" +
+                      "<strong>Status:</strong> " + status + "<br>";
+        
+        var deleteIcon = document.createElement("i");
+        deleteIcon.classList.add("fas", "fa-trash-alt", "cursor-pointer", "text-red-500", "ml-2", "absolute", "top-4", "right-4");
+        deleteIcon.setAttribute("aria-hidden", "true");
+        
+        deleteIcon.addEventListener("click", function() {
+            handleDelete(appointment);
+        });
+        
+        appointmentDiv.innerHTML = content;
+        appointmentDiv.appendChild(deleteIcon);
+        container.appendChild(appointmentDiv);
+    });
+    
+    function handleDelete(appointment) {
+        var xhr = new XMLHttpRequest();
+        xhr.open("POST", "/delete_user_request", true);
+        xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+        xhr.onreadystatechange = function () {
+            if (xhr.readyState === 4 && xhr.status === 200) {
+                console.log("Deleted successfully");
+                window.location.reload();
+            }
+        };
+        xhr.send("id=" + appointment[0]);
+    }
+</script>
+{% endblock %}
