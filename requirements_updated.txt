@@ -67,7 +67,7 @@ crayons==0.4.0
 cryptography==42.0.5
 cycler==0.12.1
 cymem==2.0.8
-Cython==3.0.0
+Cython
 dask==2022.10.2
 dataclasses-json==0.6.5
 debugpy==1.8.1
@@ -133,7 +133,7 @@ greenlet==3.1.1
 grpcio==1.64.1
 grpcio-status==1.62.2
 gTTS==2.5.1
-gunicorn==23.0.0
+gunicorn
 h11==0.12.0
 h2==3.2.0
 h5py==3.10.0
