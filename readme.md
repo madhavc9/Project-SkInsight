@@ -1,147 +1,163 @@
-# SkIntellect: AI-Powered Facial Analysis for Acne Detection
+<a id="readme-top"></a>
 
-[![License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
-[![Contributors](https://img.shields.io/github/contributors/your-repo)](CONTRIBUTORS.md)
-
-Welcome to **SkIntellect**, an advanced AI-powered platform designed to analyze facial images for acne detection and skincare recommendations.
+<div align="center">
+  <h3 align="center">SkIntellect: AI-Powered Facial Analysis for Acne Detection</h3>
+  <p align="center">
+    An advanced AI-driven platform for skin analysis and personalized skincare recommendations.
+    <br />
+  </p>
+</div>
 
 ---
 
 <details>
-  <summary><h2>📌 Table of Contents</h2></summary>
+  <summary><strong>Table of Contents</strong></summary>
+  <ol>
+    <li><a href="#about-the-project">About The Project</a></li>
+    <li><a href="#features-and-objectives">Features and Objectives</a></li>
+    <li><a href="#technologies-used">Technologies Used</a></li>
+    <li><a href="#getting-started">Getting Started</a></li>
+    <li><a href="#future-scope-and-challenges-faced">Future Scope & Challenges</a></li>
+    <li><a href="#website-illustrations">Website Illustrations</a></li>
+    <li><a href="#team-members">Team Members</a></li>
+  </ol>
+</details>
+
+---
+
+<a id="about-the-project"></a>
+<details>
+  <summary><strong>About The Project</strong></summary>
+  <p>
+    <strong>SkIntellect</strong> is an AI-powered dermatological tool that detects acne, evaluates skin conditions, and recommends personalized skincare solutions. It integrates deep learning with real-time facial analysis to ensure precise and accessible skincare management.
+  </p>
+</details>
+
+---
+
+<a id="features-and-objectives"></a>
+<details>
+  <summary><strong>Features and Objectives</strong></summary>
+  <ul>
+    <li>AI-Based Acne Detection</li>
+    <li>Oiliness Level Assessment</li>
+    <li>Personalized Skincare Recommendations</li>
+    <li>Dermatologist Appointment Booking</li>
+    <li>Progress Tracking for Skin Health</li>
+    <li>Secure User Authentication and Data Encryption</li>
+  </ul>
+</details>
+
+---
+
+<a id="technologies-used"></a>
+<details>
+  <summary><strong>Technologies Used</strong></summary>
+  <ul>
+    <li>Frontend: React.js, Tailwind CSS</li>
+    <li>Backend: Flask (Python)</li>
+    <li>Database: SQLite3</li>
+    <li>AI Models: YOLO, OpenCV, TensorFlow</li>
+    <li>Deployment: AWS / Google Cloud</li>
+  </ul>
+</details>
+
+---
+
+<a id="getting-started"></a>
+<details>
+  <summary><strong>Getting Started</strong></summary>
   
-- [About the Project](#about-the-project)
-- [Features and Objectives](#features-and-objectives)
-- [Technologies Used](#technologies-used)
-- [Getting Started](#getting-started)
-  - [Prerequisites](#prerequisites)
-  - [Installation](#installation)
-- [Future Scope & Challenges Faced](#future-scope-and-challenges-faced)
-- [Website Illustrations](#website-illustrations)
-- [Team Members](#team-members)
+  <details>
+    <summary><strong>Prerequisites</strong></summary>
+    <ul>
+      <li>Python 3.8+</li>
+      <li>Node.js & npm</li>
+      <li>Virtual Environment (venv or conda)</li>
+    </ul>
+  </details>
 
+  <details>
+    <summary><strong>Installation</strong></summary>
+    <ol>
+      <li>Clone the Repository:
+      <pre><code class="bash">git clone https://github.com/your-repo/SkIntellect.git
+cd SkIntellect</code></pre></li>
+      <li>Setup Backend:
+      <pre><code class="bash">cd backend
+pip install -r requirements.txt
+python app.py</code></pre></li>
+      <li>Setup Frontend:
+      <pre><code class="bash">cd frontend
+npm install
+npm start</code></pre></li>
+      <li>Run the Project:
+        <ul>
+          <li>Access at <code>http://localhost:3000</code></li>
+        </ul>
+      </li>
+    </ol>
+  </details>
 </details>
 
 ---
 
+<a id="future-scope-and-challenges-faced"></a>
 <details>
-  <summary><h2>💡 About the Project</h2></summary>
+  <summary><strong>Future Scope & Challenges</strong></summary>
+  <ul>
+    <li>Expanding detection to additional dermatological conditions.</li>
+    <li>Integrating an AI-driven chatbot for skincare queries.</li>
+    <li>Enhancing AI models for better accuracy and real-time processing.</li>
+  </ul>
   
-**SkIntellect** is a smart dermatological AI system that detects acne, evaluates oiliness, and recommends personalized skincare solutions. The platform integrates YOLO-based deep learning models with real-time facial analysis, ensuring precise and accessible skincare management.
+  <strong>Challenges Faced:</strong>
+  <ul>
+    <li>Data diversity for unbiased AI predictions.</li>
+    <li>Optimizing YOLO models for efficient performance.</li>
+    <li>Simplifying UI for broader accessibility.</li>
+  </ul>
 </details>
 
 ---
 
+<a id="website-illustrations"></a>
 <details>
-  <summary><h2>🚀 Features and Objectives</h2></summary>
-
-✔ **AI-Based Acne Detection**: Identifies acne types (whiteheads, blackheads, papules) with high precision.
-✔ **Oiliness Assessment**: Evaluates skin texture and shine to classify oiliness levels.
-✔ **Personalized Skincare Recommendations**: Provides tailored product suggestions based on AI analysis.
-✔ **Dermatologist Appointment Booking**: Users can schedule online consultations.
-✔ **Progress Tracking**: Tracks skin improvements over time using data visualization.
-✔ **Privacy & Security**: Secure user authentication and encrypted data storage.
+  <summary><strong>Website Illustrations</strong></summary>
+  <p>Include screenshots showcasing:</p>
+  <ul>
+    <li>AI-Based Acne Detection Results</li>
+    <li>Product Recommendations</li>
+    <li>Dermatologist Booking System</li>
+  </ul>
 </details>
 
 ---
 
+<a id="team-members"></a>
 <details>
-  <summary><h2>🛠 Technologies Used</h2></summary>
-
-- **Frontend**: React.js, Tailwind CSS
-- **Backend**: Flask (Python)
-- **Database**: SQLite3
-- **AI Models**: YOLO (You Only Look Once), OpenCV, TensorFlow
-- **Deployment**: AWS / Google Cloud
+  <summary><strong>Team Members</strong></summary>
+  <ul>
+    <li><strong>Madhav Choudhary</strong> - Project Lead</li>
+    <li><strong>Team Member 2</strong> - AI/ML Engineer</li>
+    <li><strong>Team Member 3</strong> - Full Stack Developer</li>
+    <li><strong>Team Member 4</strong> - UI/UX Designer</li>
+  </ul>
 </details>
 
 ---
 
-<details>
-  <summary><h2>📖 Getting Started</h2></summary>
-  
-### Prerequisites
-Ensure you have the following installed:
-- Python 3.8+
-- Node.js & npm
-- Virtual environment (`venv` or `conda`)
-
-### Installation
-1. **Clone the repository**
-   ```sh
-   git clone https://github.com/your-repo/SkIntellect.git
-   cd SkIntellect
-   ```
-
-2. **Backend Setup**
-   ```sh
-   cd backend
-   pip install -r requirements.txt
-   python app.py
-   ```
-
-3. **Frontend Setup**
-   ```sh
-   cd frontend
-   npm install
-   npm start
-   ```
-
-4. **Run the Project**
-   - Open `http://localhost:3000` to access the application.
-</details>
-
----
-
-<details>
-  <summary><h2>🔮 Future Scope & Challenges Faced</h2></summary>
-  
-### Future Scope
-✅ Expand skin analysis to detect additional dermatological conditions (rosacea, eczema, etc.)
-✅ Implement real-time AI-based chatbot for instant skincare queries
-✅ Enhance AI models for better accuracy & lower computational costs
-
-### Challenges Faced
-⚠ **Data Diversity**: Collecting diverse skin type datasets for unbiased AI predictions
-⚠ **Processing Speed**: Optimizing YOLO models for real-time skin analysis
-⚠ **User Adoption**: Simplifying the interface for non-tech-savvy users
-</details>
-
----
-
-<details>
-  <summary><h2>🌍 Website Illustrations</h2></summary>
-
-Screenshots of the application showcasing:
-- **Acne Detection Results**
-- **Product Recommendations**
-- **Dermatologist Booking System**
-
-*(Add images or links here)*
-</details>
-
----
-
-<details>
-  <summary><h2>👥 Team Members</h2></summary>
-
-| Name | Role |
-|------|------|
-| **Madhav Choudhary** | Project Lead |
-| **Team Member 2** | AI/ML Engineer |
-| **Team Member 3** | Full Stack Developer |
-| **Team Member 4** | UI/UX Designer |
-
-📩 Feel free to connect with us for collaboration!
-</details>
-
----
-
-## 📜 License
+## License
 This project is licensed under the [MIT License](LICENSE).
 
-## 🤝 Contributing
-We welcome contributions! Please check the [CONTRIBUTING.md](CONTRIBUTING.md) for guidelines.
+## Contact
+<strong>Developer</strong>: Madhav Choudhary<br>
+📧 Email: [madhav.c9@hotmail.com](mailto:madhav.c9@hotmail.com)<br>
+🔗 GitHub: [https://github.com/madhavc9](https://github.com/madhavc9)<br>
+🔗 LinkedIn: [https://linkedin.com/in/madhav-choudhary](https://linkedin.com/in/madhav-choudhary)<br>
 
-## ⭐ Support
-If you find this project useful, give us a **star** ⭐ on GitHub!
+---
+
+<div align="center">
+  If you find this project useful, give it a ⭐! In case of any issues, feel free to contact me.
+</div>
