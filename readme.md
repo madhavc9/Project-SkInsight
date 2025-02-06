@@ -17,6 +17,7 @@
 
 <details>
   <summary><strong>Table of Contents</strong></summary>
+  <br>
   <ol>
     <li><a href="#about-the-project">About The Project</a></li>
     <li><a href="#features-and-objectives">Features and Objectives</a></li>
@@ -45,6 +46,7 @@
 ---
 
 <a id="features-and-objectives"></a>
+<br>
 <details>
   <summary><strong>Features and Objectives</strong></summary>
   <ul>
@@ -60,6 +62,7 @@
 ---
 
 <a id="technologies-used"></a>
+<br>
 <details>
   <summary><strong>Technologies Used</strong></summary>
   <ul>
@@ -78,7 +81,9 @@
   <summary><strong>Getting Started</strong></summary>
   
   <details>
+    <br>
     <summary><strong>Prerequisites</strong></summary>
+    <br>
     <ul>
       <li>Python 3.8+</li>
       <li>Node.js & npm</li>
@@ -88,6 +93,7 @@
 
   <details>
     <summary><strong>Installation</strong></summary>
+    <br>
     <ol>
       <li>Clone the Repository:
       <pre><code class="bash">git clone https://github.com/your-repo/SkinSight.git
@@ -112,8 +118,12 @@ npm start</code></pre></li>
 ---
 
 <a id="future-scope-and-challenges-faced"></a>
+<br>
 <details>
   <summary><strong>Future Scope & Challenges</strong></summary>
+  <br>
+  <strong>Future Scope</strong>
+  <br>
   <ul>
     <li>Expanding detection to additional dermatological conditions.</li>
     <li>Integrating an AI-driven chatbot for skincare queries.</li>
@@ -121,6 +131,7 @@ npm start</code></pre></li>
   </ul>
   
   <strong>Challenges Faced:</strong>
+  <br>
   <ul>
     <li>Data diversity for unbiased AI predictions.</li>
     <li>Optimizing YOLO models for efficient performance.</li>
@@ -132,24 +143,30 @@ npm start</code></pre></li>
 
 <details>
   <summary><strong>Website Illustrations</strong></summary>
+   <br>
   <p>Below are screenshots of key features of SkinSight:</p>
+  <br>
   <ul>
     <li>
       <strong>Doctor Appointment Page</strong><br>
       <img src="https://github.com/madhavc9/Project-SkInsight/raw/main/web_demo_images/doctor_appointment.png" alt="Doctor Appointment Page" width="600">
     </li>
+     <br>
     <li>
       <strong>Face Analysis Page</strong><br>
       <img src="https://github.com/madhavc9/Project-SkInsight/raw/main/web_demo_images/face_analysis.png" alt="Face Analysis Screenshot" width="600">
     </li>
+     <br>
     <li>
       <strong>Login Page</strong><br>
       <img src="https://github.com/madhavc9/Project-SkInsight/raw/main/web_demo_images/login_page.png" alt="Login Page Screenshot" width="600">
     </li>
+     <br>
     <li>
       <strong>New Appointment Page</strong><br>
       <img src="https://github.com/madhavc9/Project-SkInsight/raw/main/web_demo_images/new_appointment.png" alt="New Appointment Screenshot" width="600">
     </li>
+     <br>
     <li>
       <strong>Signup Page</strong><br>
       <img src="https://github.com/madhavc9/Project-SkInsight/raw/main/web_demo_images/signup_page.png" alt="Signup Page Screenshot" width="600">
@@ -162,6 +179,7 @@ npm start</code></pre></li>
 <a id="collaborators"></a>
 <details>
   <summary><strong>Collaborators</strong></summary>
+   <br>
   <ul>
     <li><a href="https://github.com/piyushkumar24">Piyush Kumar</a> (21BCE3077)</li>
     <li><a href="https://github.com/madhavc9">Madhav Choudhary</a> (21BCE3239)</li>
