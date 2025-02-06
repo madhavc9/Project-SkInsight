@@ -129,25 +129,34 @@ npm start</code></pre></li>
 
 ---
 
-<a id="website-illustrations"></a>
 <details>
   <summary><strong>Website Illustrations</strong></summary>
   <p>Below are screenshots of key features of SkinSight:</p>
   <ul>
-    <li><strong>Doctor Appointment Page</strong></li>
-    <img src="https://github.com/madhavc9/Project-SkInsight/blob/main/web_demo_images/doctor_appointment.png" alt="Doctor Appointment Page" width="600">
-    
-    <li><strong>Face Analysis Page</strong></li>
-    <img src="https://github.com/madhavc9/Project-SkInsight/blob/main/web_demo_images/face_analysis.png" alt="Face Analysis Screenshot" width="600">
-    
-    <li><strong>Login Page</strong></li>
-    <img src="https://github.com/madhavc9/Project-SkInsight/blob/main/web_demo_images/login_page.png" alt="Login Page Screenshot" width="600">
-    
-    <li><strong>New Appointment Page</strong></li>
-    <img src="https://github.com/madhavc9/Project-SkInsight/blob/main/web_demo_images/new_appointment.png" alt="New Appointment Screenshot" width="600">
-    
-    <li><strong>Signup Page</strong></li>
-    <img src="https://github.com/madhavc9/Project-SkInsight/blob/main/web_demo_images/signup_page.png" alt="Signup Page Screenshot" width="600">
+    <li>
+      <strong>Doctor Appointment Page</strong><br>
+      <img src="https://github.com/madhavc9/Project-SkInsight/blob/main/web_demo_images/doctor_appointment.png" alt="Doctor Appointment Page" width="600">
+    </li>
+
+    <li>
+      <strong>Face Analysis Page</strong><br>
+      <img src="https://github.com/madhavc9/Project-SkInsight/blob/main/web_demo_images/face_analysis.png" alt="Face Analysis Screenshot" width="600">
+    </li>
+
+    <li>
+      <strong>Login Page</strong><br>
+      <img src="https://github.com/madhavc9/Project-SkInsight/blob/main/web_demo_images/login_page.png" alt="Login Page Screenshot" width="600">
+    </li>
+
+    <li>
+      <strong>New Appointment Page</strong><br>
+      <img src="https://github.com/madhavc9/Project-SkInsight/blob/main/web_demo_images/new_appointment.png" alt="New Appointment Screenshot" width="600">
+    </li>
+
+    <li>
+      <strong>Signup Page</strong><br>
+      <img src="https://github.com/madhavc9/Project-SkInsight/blob/main/web_demo_images/signup_page.png" alt="Signup Page Screenshot" width="600">
+    </li>
   </ul>
 </details>
 
