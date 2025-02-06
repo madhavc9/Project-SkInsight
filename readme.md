@@ -33,6 +33,7 @@
 <a id="about-the-project"></a>
 <details>
   <summary><strong>About The Project</strong></summary>
+  <br>
   <p>
     <strong>SkinSight</strong> is an AI-powered dermatological platform designed to analyze facial images for acne detection, skin condition assessment, and personalized skincare recommendations. By leveraging deep learning models like YOLO, OpenCV, and TensorFlow, the platform provides accurate real-time analysis of skin health.
   </p>
