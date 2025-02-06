@@ -14,7 +14,6 @@
     <a href="https://drive.google.com/file/d/1tP3LpOuq9oVjJ5IHTt3EekR550bA1q01/view?usp=sharing" target="_blank"><strong> Live Website »</strong></a>
   </p>
 </div>
----
 
 <details>
   <summary><strong>Table of Contents</strong></summary>
@@ -156,7 +155,8 @@ npm start</code></pre></li>
   </ul>
 </details>
 
-<!-- FOOTER -->
+---
+
 <div align="center">
   💙 If you like this project, give it a ⭐! In case of any bugs or feedback, feel free to contact me.
 </div>
