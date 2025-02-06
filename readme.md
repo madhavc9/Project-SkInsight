@@ -134,12 +134,10 @@ npm start</code></pre></li>
   <summary><strong>Website Illustrations</strong></summary>
   <p>Below are screenshots of key features of SkinSight:</p>
   <ul>
-    <li><strong>AI-Based Acne Detection Results</strong></li>
-    <img src="https://raw.githubusercontent.com/your-repo/demo-images/acne-detection.png" alt="Acne Detection Screenshot" width="600">
-    <li><strong>Product Recommendations</strong></li>
-    <img src="https://raw.githubusercontent.com/your-repo/demo-images/product-recommendations.png" alt="Product Recommendations Screenshot" width="600">
+    <li><strong>Doctor Appointment Page</strong></li>
+    <img src="[https://raw.githubusercontent.com/your-repo/demo-images/acne-detection.png" alt="Doctor Appointment Page](http://github.com/madhavc9/Project-SkInsight/blob/main/web_demo_images/doctor_appointment.png)" width="600">
     <li><strong>Dermatologist Booking System</strong></li>
-    <img src="https://raw.githubusercontent.com/your-repo/demo-images/appointment-booking.png" alt="Appointment Booking Screenshot" width="600">
+    <img src="[https://raw.githubusercontent.com/your-repo/demo-images/appointment-booking.png](https://github.com/madhavc9/Project-SkInsight/blob/main/web_demo_images/face_analysis.png)" alt="Appointment Booking Screenshot" width="600">
   </ul>
 </details>
 
