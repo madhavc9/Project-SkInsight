@@ -46,7 +46,6 @@
 ---
 
 <a id="features-and-objectives"></a>
-<br>
 <details>
   <summary><strong>Features and Objectives</strong></summary>
   <ul>
@@ -62,7 +61,6 @@
 ---
 
 <a id="technologies-used"></a>
-<br>
 <details>
   <summary><strong>Technologies Used</strong></summary>
   <ul>
@@ -118,7 +116,6 @@ npm start</code></pre></li>
 ---
 
 <a id="future-scope-and-challenges-faced"></a>
-<br>
 <details>
   <summary><strong>Future Scope & Challenges</strong></summary>
   <br>
