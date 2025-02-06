@@ -79,7 +79,7 @@
 <a id="getting-started"></a>
 <details>
   <summary><strong>Getting Started</strong></summary>
-  
+  <br>
   <details>
     <br>
     <summary><strong>Prerequisites</strong></summary>
