@@ -48,6 +48,7 @@
 <a id="features-and-objectives"></a>
 <details>
   <summary><strong>Features and Objectives</strong></summary>
+  <br>
   <ul>
     <li>AI-Based Acne Detection</li>
     <li>Oiliness Level Assessment</li>
@@ -63,6 +64,7 @@
 <a id="technologies-used"></a>
 <details>
   <summary><strong>Technologies Used</strong></summary>
+  <br>
   <ul>
     <li>Frontend: React.js, Tailwind CSS</li>
     <li>Backend: Flask (Python)</li>
