@@ -58,7 +58,7 @@
     <li>Backend: Flask (Python)</li>
     <li>Database: SQLite3</li>
     <li>AI Models: YOLO, OpenCV, TensorFlow</li>
-    <li>Deployment: AWS / Google Cloud</li>
+    <li>Deployment: Render</li>
   </ul>
 </details>
 
