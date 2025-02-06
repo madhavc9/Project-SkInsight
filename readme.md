@@ -83,7 +83,6 @@
   <details>
     <br>
     <summary><strong>Prerequisites</strong></summary>
-    <br>
     <ul>
       <li>Python 3.8+</li>
       <li>Node.js & npm</li>
