@@ -136,25 +136,13 @@ npm start</code></pre></li>
 </details>
 
 ---
-
-<a id="team-members"></a>
-<details>
-  <summary><strong>Team Members</strong></summary>
-  <ul>
-    <li><strong>Madhav Choudhary</strong> - Project Lead</li>
-    <li><strong>Team Member 2</strong> - AI/ML Engineer</li>
-    <li><strong>Team Member 3</strong> - Full Stack Developer</li>
-    <li><strong>Team Member 4</strong> - UI/UX Designer</li>
-  </ul>
-</details>
-
----
 ## Collaborators
 
 Team of toal 3 members have contributed to the project's success:
 
-- [Piyush Kumar](https://github.com/piyushkumar24)
-- [Anas Khan](https://github.com/khananas007)
+- [Piyush Kumar][21BCE3077](https://github.com/piyushkumar24)
+- [Madhav Choudhary][21BCE3239](https://github.com/madhavc9)
+- [Anas Khan][21BCE3244](https://github.com/khananas007)
 
 
 
