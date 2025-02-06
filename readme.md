@@ -140,9 +140,9 @@ npm start</code></pre></li>
 
 Team of toal 3 members have contributed to the project's success:
 
-- [Piyush Kumar][21BCE3077](https://github.com/piyushkumar24)
-- [Madhav Choudhary][21BCE3239](https://github.com/madhavc9)
-- [Anas Khan][21BCE3244](https://github.com/khananas007)
+- [Piyush Kumar][21BCE3077][(https://github.com/piyushkumar24)]
+- [Madhav Choudhary][21BCE3239][(https://github.com/madhavc9)]
+- [Anas Khan][21BCE3244] [(https://github.com/khananas007)]
 
 
 
