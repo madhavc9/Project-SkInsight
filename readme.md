@@ -2,7 +2,7 @@
 
 <!-- PROJECT LOGO -->
 <div align="center">
-  <img src="/coverimage.jpeg" alt="Airline Management System Logo" width="600">
+  <img src="/coverimage.jpeg" alt="SkInsight Project Logo" width="600">
   <h3 align="center">SkIntellect: AI-Powered Facial Analysis for Acne Detection</h3>
   <p align="center">
    An advanced AI-driven platform for skin analysis and personalized skincare recommendations.
