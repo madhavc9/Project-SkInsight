@@ -15,17 +15,6 @@
   </p>
 </div>
 ---
-<a id="readme-top"></a>
-
-<div align="center">
-  <h3 align="center">SkinSight: AI-Powered Facial Analysis for Acne Detection</h3>
-  <p align="center">
-    An advanced AI-driven platform for skin analysis and personalized skincare recommendations.
-    <br />
-  </p>
-</div>
-
----
 
 <details>
   <summary><strong>Table of Contents</strong></summary>
