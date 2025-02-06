@@ -146,18 +146,13 @@ npm start</code></pre></li>
 </details>
 
 ---
+## Collaborators
 
-## License
-This project is licensed under the [MIT License](LICENSE).
+Team of toal 3 members have contributed to the project's success:
 
-## Contact
-<strong>Developer</strong>: Madhav Choudhary<br>
-📧 Email: [madhav.c9@hotmail.com](mailto:madhav.c9@hotmail.com)<br>
-🔗 GitHub: [https://github.com/madhavc9](https://github.com/madhavc9)<br>
-🔗 LinkedIn: [https://linkedin.com/in/madhav-choudhary](https://linkedin.com/in/madhav-choudhary)<br>
+- [Piyush Kumar](https://github.com/piyushkumar24)
+- [Anas Khan](https://github.com/khananas007)
 
----
 
-<div align="center">
-  If you find this project useful, give it a ⭐! In case of any issues, feel free to contact me.
-</div>
+
+
