@@ -156,6 +156,10 @@ npm start</code></pre></li>
   </ul>
 </details>
 
+<!-- FOOTER -->
+<div align="center">
+  💙 If you like this project, give it a ⭐! In case of any bugs or feedback, feel free to contact me.
+</div>
 
 
 
