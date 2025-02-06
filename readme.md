@@ -29,8 +29,11 @@
 <details>
   <summary><strong>About The Project</strong></summary>
   <p>
-    <strong>SkIntellect</strong> is an AI-powered dermatological tool that detects acne, evaluates skin conditions, and recommends personalized skincare solutions. It integrates deep learning with real-time facial analysis to ensure precise and accessible skincare management.
+    <strong>SkIntellect</strong> is an AI-powered dermatological platform designed to analyze facial images for acne detection, skin condition assessment, and personalized skincare recommendations. By leveraging deep learning models like YOLO, OpenCV, and TensorFlow, the platform provides accurate real-time analysis of skin health.
   </p>
+ <p> The project aims to bridge the gap between AI and dermatology by offering users a smart, accessible, and cost-effective solution for skincare management. SkIntellect provides detailed skin analysis, customized product recommendations, dermatologist appointment booking, and progress tracking, ensuring a holistic skincare experience for users.</p>
+ <p> Built with Flask (Python) for the backend, React.js for the frontend, and SQLite3 for secure data storage, SkIntellect is optimized for both scalability and user engagement. It empowers individuals with actionable insights and professional support, making advanced dermatological care more accessible than ever. </p>
+
 </details>
 
 ---
